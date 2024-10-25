@@ -1,11 +1,17 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+//GENERADOR DE NOMBRES DE DOMINIO
+// Listas de pronombres, adjetivos y sustantivos
+const pronombre = ["the", "our"];
+const adjetivo = ["great", "big"];
+const sustantivo = ["jogger", "racoon"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+// Función para generar nombres de dominio
+function generateDomains() {
+  for (let i = 0; i < pronombre.length; i++) {
+    for (let j = 0; j < adjetivo.length; j++) {
+      for (let k = 0; k < sustantivo.length; k++) {
+        console.log(`${pronombre[i]}${adjetivo[j]}${sustantivo[k]}${".com"}`);
+      }
+    }
+  }
+}
+generateDomains();
